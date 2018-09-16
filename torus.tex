@@ -7,8 +7,9 @@
 
 \input{preamble.tex} %% we can turn off input when making a master document
 
-%% \outcome{Understand a first example of the Ximera style.}
+\outcome{More practice with solids of revolution.}
 \title{Solid Torus}
+\author{Kirollos Masood}
 
 \begin{document}
 \begin{abstract}
@@ -35,9 +36,9 @@ We may fill in this circle and rotate the disc around to get a solid of revoluti
 \begin{exercise}
 	Naturally, we may ask how much volume there is in the new shape we constructed. Let's try to answer this question by setting up an integral with respect to $y$. This means we'll be using the  \wordChoice{\choice{shell method}\choice[correct]{washer method}\choice{nail method}\choice{turtle method}}.
 	
-	Since $y$ is our independent variable, we'll need to solve for $x$ to get our ``top'' and ``bottom'' functions, or in this case, right and left.
+	Since $y$ is our independent variable, we'll need to solve for $x$ to get our ``bottom'' and ``top'' functions, or in this case, left and right.
 	
-	$$x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}, \quad x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}$$
+	$$x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}, \quad  x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}$$
 	
 	And we will be integrating from $y=\answer[given]{-r}$ to $y=\answer[given]{r}$.
 	
@@ -57,7 +58,15 @@ We may fill in this circle and rotate the disc around to get a solid of revoluti
 				&= \left[ 2 \pi R \right] \left[ \pi r^2 \right] \\
 			\end{align*}
 			
-			On the other hand, imagine starting out with a plastic rod with a base of $\pi r^2$ and a length of $2\pi R$. Now try to bend it to form a donut (our solid torus). It wouldn't work out, right? It would crack because we started out with something straight and our donut is curved. But if this rod were made out of clay, we could deform it and get back out torus, because the volumes are exactly the same!
+			On the other hand, imagine starting out with a plastic rod with a base of $\pi r^2$ and a length of $2\pi R$. Now try to bend it to form a donut (our solid torus). It wouldn't work out, right? It would crack because we started out with something straight and our donut is curved. But if this rod were made out of clay, we could deform it and get back our torus, because the volumes are exactly the same!
+			
+			Now, we found the volume using the washer method. On your own, you may wish to try using the shell method. Finally, please select all that apply.
+			\begin{selectAll}
+				\choice[correct]{I think the torus is cool!}
+				\choice[correct]{I want to learn more about geometry.}
+				\choice[correct]{I will never think about donuts the same way again.}
+				\choice[correct]{I laughed at least once while doing this problem.}
+			  \end{selectAll}
 			
 		\end{exercise}
 	\end{exercise}
