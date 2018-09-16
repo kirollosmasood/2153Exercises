@@ -1,0 +1,52 @@
+\documentclass{ximera}
+%% handout
+%% space
+%% newpage
+%% numbers
+%% nooutcomes
+
+\input{preamble.tex} %% we can turn off input when making a master document
+
+%% \outcome{Understand a first example of the Ximera style.}
+\title{Solid Torus}
+
+\begin{document}
+\begin{abstract}
+In this activity, we will use a case study to help us better understand solids of revolution.
+\end{abstract}
+\maketitle
+
+By now, you may have seen some rather creative shapes constructed by rotating various regions in the $xy$-plane about an axis. Let us take a closer look at yet another.
+\begin{definition}
+	A %\dfn{torus} with radii $R$ and $r$ is the surface obtained by rotating a circle of radius $r$ centered at $(0,R)$ about the $y$-axis.
+\end{definition}
+So we may fill in this circle and rotate the disc around to get a solid of revolution, which we will call a solid torus.
+\begin{image}
+	\label{torus}
+	\includegraphics{torus.jpg}
+%	\caption{A graph of a torus.}
+\end{image}
+
+\begin{remark}
+	In our definition, we chose to center our circle on the $x$-axis and revolve around the $y$-axis. We could have done it vice versa and gotten the same shape, but oriented differently. We just made a choice so we can set up integrals.
+\end{remark} 
+
+\begin{exercise}
+	Naturally, we may ask how much volume there is in the new shape we constructed. Let's try to answer this question by setting up an integral with respect to $y$. This means we'll be using the  \wordChoice{\choice{shell method}\choice[correct]{washer method}\choice{nail method}\choice{turtle method}}.
+	
+	Since $y$ is our independent variable, we'll need to solve for $x$ to get our ``top'' and ``bottom'' functions, or in this case, right and left.
+	
+	$x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}$
+	$x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}$
+	
+	Now we may set up our integral.
+	
+	\begin{align*}
+		V  &= \int_{-R}^{R} \pi [ (R+\sqrt{r^2-y^2})^{2}-(R-\sqrt{r^2-y^2})^{2}] dy \\
+		&= \int_{-R}^{R} \pi [ (R+(r^2-y^2)^{1/2})^{2}-(R-(r^2-y^2)^{1/2})^{2}] dy
+	\end{align*}
+
+
+\end{exercise}
+
+\end{document}
