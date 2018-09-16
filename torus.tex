@@ -37,25 +37,47 @@ We may fill in this circle and rotate the disc around to get a solid of revoluti
 	
 	Since $y$ is our independent variable, we'll need to solve for $x$ to get our ``top'' and ``bottom'' functions, or in this case, right and left.
 	
-	$x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}$
-	$x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}$
+	$$x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}$$ \\
+	$$x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}$$
 	
 	Now we may set up our integral.
-	 \begin{prompt}
 	\begin{align*}
-		\answer{a}
 		V  &= \int_{-R}^{R} \pi [ (R+\sqrt{r^2-y^2})^{2}-(R-\sqrt{r^2-y^2})^{2}] dy \\
 		&= \int_{-R}^{R} \pi [ (R+(r^2-y^2)^{1/2})^{2}-(R-(r^2-y^2)^{1/2})^{2}] dy
 	\end{align*}
 
-	testing
-	\end{prompt}
-		\begin{prompt}
-			$$
-			\answer{b}$$
-			testing
-		\end{prompt}
-	test test
 \end{exercise}
+
+\begin{exercise}
+	Find the absolute maximum and minimum of $F(x,y) = 5x-7y$ constrained to the closed set bounded by $y=x^2$ and $y=1$.
+	
+	\begin{prompt}
+		How many crtical points are there in this closed set?
+		\[
+		\answer{1}
+		\]
+		\begin{exercise}
+			This critical point is at:
+			\[
+			\vec{c} = \vector{\answer{5/14},\answer{25/196}}
+			\]
+		\end{exercise}
+		\begin{exercise}
+			\begin{hint}
+				Remember to check the corners.
+			\end{hint}
+			The absolute maximum of $F$ when constrained to the closed set is:
+			\[
+			F\left(\answer{5/14},\answer{25/196}\right) = \answer{25/28}
+			\]
+			The absolute minimum of $F$ when constrained to the closed set is:
+			\[
+			F\left(\answer{-1},\answer{1}\right) = \answer{-12}
+			\]
+		\end{exercise}
+	\end{prompt}
+\end{exercise}
+
+
 
 \end{document}
