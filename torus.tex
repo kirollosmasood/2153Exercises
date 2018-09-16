@@ -37,21 +37,31 @@ We may fill in this circle and rotate the disc around to get a solid of revoluti
 	
 	Since $y$ is our independent variable, we'll need to solve for $x$ to get our ``top'' and ``bottom'' functions, or in this case, right and left.
 	
-%	$$x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}$$ \\
-%	$$x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}$$
-	\begin{prompt}
+	$$x_{\mathit{right}}(y) = \answer[given]{R+\sqrt{r^2-y^2}}, \quad x_{\mathit{left}}(y) = \answer[given]{R-\sqrt{r^2-y^2}}$$
+	
+	And we will be integrating from $y=\answer[given]{-r}$ to $y=\answer[given]{r}$.
+	
 	\begin{exercise}
 		Now we may set up our integral.
 		\begin{align*}
-			V  &= \int_{\answer[given]{-R}}^{\answer[given]{R}} \pi [ (R+\sqrt{r^2-y^2})^{2}-(R-\sqrt{r^2-y^2})^{2}] dy \\
+			V  &= \int_{-r}^{r} \pi [ (R+\sqrt{r^2-y^2})^{2}-(R-\sqrt{r^2-y^2})^{2}] dy \\
+			&= \int_{-r}^{r} 4 \pi R \sqrt{r^2-y^2} dy \\
+			&= 4 \pi R \int_{-r}^{r}  \sqrt{r^2-y^2} dy \\
 		\end{align*}
+		Now let's focus on this last integral above. It exactly computes the area of a \wordChoice{\choice{circle}\choice{sphere}\choice{square}\choice[correct]{semicircle}\choice{icosahedron}}, so this last integral equals $\answer{.5 \pi r^2}$.
+		\begin{exercise}
+			Now we can put it all together.
+			\begin{align*}
+				V &= 4 \pi R \int_{-r}^{r}  \sqrt{r^2-y^2} dy \\
+				&= 4 \pi R \left[ \frac{\pi r^2}{2} \right] \\
+				&= \left[ 2 \pi R \right] \left[ \pi r^2 \right] \\
+			\end{align*}
+			
+			On the other hand, imagine starting out with a plastic rod with a base of $\pi r^2$ and a length of $2\pi R$. Now try to bend it to form a donut (our solid torus). It wouldn't work out, right? It would crack because we started out with something straight and our donut is curved. But if this rod were made out of clay, we could deform it and get back out torus, because the volumes are exactly the same!
+			
+		\end{exercise}
 	\end{exercise}
-	
-	\begin{exercise}
-		\begin{align*}
-			V  &= \int_{\answer[given]{-R}}^{\answer[given]{R}} \pi [ (R+\sqrt{r^2-y^2})^{2}-(R-\sqrt{r^2-y^2})^{2}] dy \\
-		\end{align*}
-	\end{exercise}
-	\end{prompt}
 \end{exercise}
+
+
 \end{document}
