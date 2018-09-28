@@ -20,8 +20,32 @@ In this activity, we will transcend the limits of man.
 \begin{exercise}
 	Show that
 	\begin{align*}
-		\sqrt{2}^{\sqrt{2}^{\sqrt{2}^\rotatebox{45}{\ldots}}}=2.
+		\sqrt{2}^{\sqrt{2}^{\sqrt{2}^{\rotatebox{45}{\ldots}}  }}=2.
 	\end{align*}
+	
+	Well, let's rephrase the problem using sequences. Define a sequence $\{c_n\}_{n=0}^{\infty}$ as follows.
+	\begin{align*}
+		c_0 &=\sqrt{2} \\
+		c_1 &=\sqrt{2}^{c_0}=\sqrt{2}^{\sqrt{2}} \\
+		c_2 &=\sqrt{2}^{c_1}=\sqrt{2}^{\sqrt{2}^{\sqrt{2}}} \\
+		&\vdots \\
+		c_{n+1}&=\sqrt{2}^{c_n} \\
+		&\vdots
+	\end{align*}
+	So what we actually want to show is that $\lim_{n \to \infty} c_n = \answer[given]{2}$. We can start by just showing the limit exists. We can do this by showing our sequence is (monotonically) increasing and bounded above.
+	
+	How do we show that $\{c_n\}$ is increasing? We start from the beginning. Is it true that $c_0 \leq c_1$? Well, we know that
+	\begin{align*}
+		b^x \leq b^y, \quad x \leq y,
+	\end{align*}
+	assuming that $b \geq 1$. In our situation, our base is $b=\sqrt{2}$, which is bigger than 1, and our exponents are $x=1$ and $y=\sqrt{2}$. So the answer is yes. We've established that $\sqrt{2} \leq \sqrt{2}^{\sqrt{2}}$. Next, we should check if $c_1 \leq c_2$. That means we need to check if 
+	\begin{align*}
+		\sqrt{2}^{\sqrt{2}} \leq \sqrt{2}^{\sqrt{2}^{\sqrt{2}}}.
+	\end{align*}
+	But that's true too! Because here, our base is $b=\sqrt{2}$ again. But our exponents now are $x=\sqrt{2}$ and $y=\sqrt{2}^{\sqrt{2}}$. But we just showed that $x\leq y$ a moment ago! We can repeat this process over and over again, which proves our sequence is increasing.\footnote{test}
+	
+	
+	
 	
 	
 \end{exercise}
