@@ -57,34 +57,38 @@ In this activity, we will transcend the limits of man.
 			Try raising both sides to the power of $\sqrt{2}$. The left-hand side (LHS) becomes $\sqrt{2}^{\sqrt{2}*\sqrt{2}} = \sqrt{2}^2=2$. The right-hand side (RHS) becomes $2^{\sqrt{2}}$. And it is true that $2\leq 2^{\sqrt{2}}$. Now try playing this same game again and again for all the other terms. You'll quickly see that $c_n \leq 2$ no matter what $n$ we choose.
 		\end{exercise}
 		
-		Let's take a minute to step back and review what we've accomplished. So far, we've shown that $\{c_n\}$ is increasing and bounded above. That's enough to say the limit exists; let's call it $L$ for now. We still need to show that this limit has to be $2$.
-		
-		We already proved that $c_{n} \leq 2$. So take a limit on both sides. This tells us that
-		\begin{align*}
-		L = \lim_{n \to \infty} c_n \leq \answer[given]{2}.
-		\end{align*}
-		
-		Here comes our greatest trick yet. We have the recursive relation
-		\begin{align*}
-		c_{n+1} = \sqrt{2}^{c_n}.
-		\end{align*}
-		Again, take a limit on both sides. On the LHS we get
-		\begin{align*}
-		\lim_{n \to \infty} c_{n+1} \answer[given]{L}
-		\end{align*}. 
-		On the RHS, we get
-		\begin{align*}
-		\lim_{n \to \infty} \sqrt{2}^{c_n} = \sqrt{2}^{ \lim_{n \to \infty} c_n} = \answer[given]{\sqrt{2}^L}.
-		\end{align*}
-		
 		\begin{exercise}
-			This means $L$ is a very special number. It satisfies the equation $L=\sqrt{2}^L$.
+			Let's take a minute to step back and review what we've accomplished. So far, we've shown that $\{c_n\}$ is increasing and bounded above. That's enough to say the limit exists; let's call it $L$ for now. We still need to show that this limit has to be $2$.
 			
-			\begin{image}
-				\includegraphics{graph.png}
-			\end{image}
+			We already proved that $c_{n} \leq 2$. So take a limit on both sides. This tells us that
+			\begin{align*}
+			L = \lim_{n \to \infty} c_n \leq \answer[given]{2}.
+			\end{align*}
 			
-			From the graph above, we can see that the only solutions to the equation $x=\sqrt{2}^x$ are $x=2,4$. And we've already shown that $L \leq 2$. There's no doubt about it, $L=\answer[given]{2}$.
+			Here comes our greatest trick yet. We have the recursive relation
+			\begin{align*}
+			c_{n+1} = \sqrt{2}^{c_n}.
+			\end{align*}
+			Again, take a limit on both sides. On the LHS we get
+			\begin{align*}
+			\lim_{n \to \infty} c_{n+1} \answer[given]{L}
+			\end{align*}. 
+			On the RHS, we get
+			\begin{align*}
+			\lim_{n \to \infty} \sqrt{2}^{c_n} = \sqrt{2}^{ \lim_{n \to \infty} c_n} = \answer[given]{\sqrt{2}^L}.
+			\end{align*}
+			
+			\begin{exercise}
+				This means $L$ is a very special number. It satisfies the equation $L=\sqrt{2}^L$.
+				
+				\begin{image}
+					\includegraphics{graph.png}
+				\end{image}
+				
+				From the graph above, we can see that the only solutions to the equation $x=\sqrt{2}^x$ are $x=2,4$. And we've already shown that $L \leq 2$. There's no doubt about it, $L=\answer[given]{2}$.
+			\end{exercise}
+			
+		
 		\end{exercise}
 		
 	\end{exercise}
