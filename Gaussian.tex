@@ -37,10 +37,10 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 	\end{align*}
 	
 	\begin{exercise}
-		After some simplification, we get
+		Try to simplify the answer above to get
 		\begin{align*}
-			H'(t)= 2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} t e^{-t^2 x^2)} dx \right] \\
-			=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
+			H'(t) &= 2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} t e^{-t^2 x^2} dx \right] \\
+			&=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
 		\end{align*}
 		where the last manipulation has been made to trigger your desire to integrate by substitution. So we set $u(x)=\answer[given]{tx}$, so that $du=\answer[given]{tdx}$. We shouldn't forget about our limits of integration! When $x=0$, $u=\answer[given]{0}$. When $x=1$, $u=\answer[given]{t}$.
 		
@@ -49,7 +49,33 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 			\begin{align*}
 				H'(t)=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{t} e^{-(u)^2}du \right]
 			\end{align*}
-			But $u$ is just a dummy variable. So doesn't that second integral look a lot like $F(t)$? In other words, $H'(t)=0$. That means that $H$ is constant; it's always $pi/4$. That's a shock!
+			But $u$ is just a dummy variable, so doesn't that second integral look a lot like $F(t)$? In other words, $H'(t)=0$. That means our function $H$ is constant; it's always $pi/4$. That's a shock!
+			
+			Now on one hand,
+			\begin{align*}
+				\lim_{t \to \infty} H(t) = \lim_{t \to \infty} \frac{\pi}{4} = \answer[given]{\pi/4}.
+			\end{align*}
+			On the other hand,
+			\begin{align*}
+				\lim_{t \to \infty} H(t) = \lim_{t \to \infty} \left[ F(t)^2+G(t) \right] = \left[\lim_{t \to \infty} F(t) \right]^2 + \lim_{t \to \infty} G(t).
+			\end{align*}
+			But
+			\begin{align*}
+				\lim_{t \to \infty} G(t) = \lim_{t \to \infty} \int_{0}^{1} \frac{e^{-t^2(1+x^2)}}{1+x^2} dx = \int_{0}^{1} \frac{ \lim_{t \to \infty} e^{-t^2(1+x^2)}}{1+x^2} dx = \int_{0}^{1} 0 dx = \answer[given]{0}.
+			\end{align*}
+			This means
+			\begin{align*}
+				\frac{\pi}{4} = \left[\lim_{t \to \infty} F(t) \right]^2 = \left[ \int_{0}^{\infty} e^{-x^2} dx \right]^2.
+			\end{align*}
+			We may solve to get
+			\begin{align*}
+				\int_{0}^{\infty} e^{-x^2} dx = \answer[given]{\sqrt{\pi}/2}.
+			\end{align*}			
+			And finally, since $e^{-x^2}$ is an even function,
+			\begin{align*}
+				\int_{-\infty}^{\infty} e^{-x^2} dx = \answer[given]{\sqrt{\pi}}.
+			\end{align*}
+			You may sleep soundly tonight.
 			
 			
 		\end{exercise}
