@@ -19,46 +19,37 @@ In this activity, we will take a look at a rather tricky improper integral.
 
 Perhaps you have lain awake at night, thinking it is impossible to calculate $\int_{-\infty}^{\infty} e^{-x^2}dx$. After all, we typically evaluate improper integrals by first computing a proper integral and then taking limits. That strategy uses the Second Fundamental Theorem of Calculus, but there is no closed-form expression for $\int e^{-x^2} dx$. Thankfully, we have other methods at our disposal. But we'll need to proceed with finesse since we don't have the heavy machinery of multivariable calculus.
 
-Let's first define a few functions that will help us out.
-\begin{align*}
-	&F(t)=\int_{0}^{t} e^{-x^2}dx \\
-	&G(t)=\int_{0}^{1} \frac{e^{-t^2(1+x^2)}}{1+x^2} dx \\
-	&H(t)=F(t)^2+G(t)
-\end{align*}
-The first function looks relevant, but it's not clear yet how the other ones will help us. Still, let's move on by exploring $H$.
-\begin{align*}
-H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx =  \left[ \answer[given]{0} \right]^2 + \answer[given]{\pi/4} = \answer[given]{\pi/4}
-\end{align*}
-
-Next, let's find $H'(t)$. We can find the derivative of $F$ using the \wordChoice{\choice[correct]{First Fundamental Theorem of Calculus}\choice{Second Fundamental Theorem of Calculus}\choice{Third Fundamental Theorem of Calculus}\choice{Fundamental Theorem of Algebra}\choice{Fundamental Theorem of Riemannian Geometry}}. Now even though the limits of integration in $H$ don't depend on $t$, the integrand does. So to evaluate $H'(t)$, you may simply pull the derivative (with respect to $t$) inside and treat $x$ like a constant.
-\begin{align*}
-H'(t) =2F(t)F'(t)+H'(t) \\
-=2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx \\
-\end{align*}
-
 \begin{exercise}
-	After some simplification, we get
-	$$
-	H'(t)= 2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} t e^{-t^2 x^2)} dx \right] \\
-	=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
-	$$
-	where the last manipulation has been made to trigger your desire to integrate by substitution.
+	Let's first define a few functions that will help us out.
+	\begin{align*}
+		&F(t)=\int_{0}^{t} e^{-x^2}dx \\
+		&G(t)=\int_{0}^{1} \frac{e^{-t^2(1+x^2)}}{1+x^2} dx \\
+		&H(t)=F(t)^2+G(t)
+	\end{align*}
+	The first function looks relevant, but it's not clear yet how the other ones will help us. Still, let's move on by exploring $H$.
+	\begin{align*}
+	H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx =  \left[ \answer[given]{0} \right]^2 + \answer[given]{\pi/4} = \answer[given]{\pi/4}
+	\end{align*}
+	
+	Next, let's find $H'(t)$. We can find the derivative of $F$ using the \wordChoice{\choice[correct]{First Fundamental Theorem of Calculus}\choice{Second Fundamental Theorem of Calculus}\choice{Third Fundamental Theorem of Calculus}\choice{Fundamental Theorem of Algebra}\choice{Fundamental Theorem of Riemannian Geometry}}. Now even though the limits of integration in $H$ don't depend on $t$, the integrand does. So to evaluate $H'(t)$, you may simply pull the derivative (with respect to $t$) inside and treat $x$ like a constant.
+	\begin{align*}
+	H'(t) =2F(t)F'(t)+H'(t) \\
+	=2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx \\
+	\end{align*}
+	
+	\begin{exercise}
+		After some simplification, we get
+		\begin{align*}
+			H'(t)= 2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} t e^{-t^2 x^2)} dx \right] \\
+			=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
+		\end{align*}
+		where the last manipulation has been made to trigger your desire to integrate by substitution. So we set $u(x)=\answer[given]{tx}$, so that $du=\answer[given{tdx}]$. We shouldn't forget about our limits of integration! When $x=0$, $u=\answer[given]{0}$. When $x=1$, $u=\answer[given]{t}$.
+		
+	
+	\end{exercise}
+
 
 \end{exercise}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \end{document}
