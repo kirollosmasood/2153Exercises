@@ -20,7 +20,7 @@ In this activity, we will transcend the limits of man.
 \begin{exercise}
 	Show that
 	\begin{align*}
-		\sqrt{2}^{\sqrt{2}^{\sqrt{2}^{\rotatebox{45}{\ldots}}  }}=2.
+		\sqrt{2}^{\sqrt{2}^{\sqrt{2}^{\ldots}}  }=2.
 	\end{align*}
 	
 	Well, let's rephrase the problem using sequences. Define a sequence $\{c_n\}_{n=0}^{\infty}$ as follows.
@@ -32,17 +32,32 @@ In this activity, we will transcend the limits of man.
 		c_{n+1}&=\sqrt{2}^{c_n} \\
 		&\vdots
 	\end{align*}
-	So what we actually want to show is that $\lim_{n \to \infty} c_n = \answer[given]{2}$. We can start by just showing the limit exists. We can do this by showing our sequence is (monotonically) increasing and bounded above.
+	So what we actually want to show is that $\lim_{n \to \infty} c_n = \answer[given]{2}$. We can start by just showing there is a limit. We can do this by showing our sequence is (monotonically) increasing and bounded above.
 	
-	How do we show that $\{c_n\}$ is increasing? We start from the beginning. Is it true that $c_0 \leq c_1$? Well, we know that
-	\begin{align*}
-		b^x \leq b^y, \quad x \leq y,
-	\end{align*}
-	assuming that $b \geq 1$. In our situation, our base is $b=\sqrt{2}$, which is bigger than 1, and our exponents are $x=1$ and $y=\sqrt{2}$. So the answer is yes. We've established that $\sqrt{2} \leq \sqrt{2}^{\sqrt{2}}$. Next, we should check if $c_1 \leq c_2$. That means we need to check if 
-	\begin{align*}
-		\sqrt{2}^{\sqrt{2}} \leq \sqrt{2}^{\sqrt{2}^{\sqrt{2}}}.
-	\end{align*}
-	But that's true too! Because here, our base is $b=\sqrt{2}$ again. But our exponents now are $x=\sqrt{2}$ and $y=\sqrt{2}^{\sqrt{2}}$. But we just showed that $x\leq y$ a moment ago! We can repeat this process over and over again, which proves our sequence is increasing.\footnote{test}
+	\begin{exercise}
+		How do we show that $\{c_n\}$ is increasing? We start from the beginning. Is it true that $c_0 \leq c_1$? Well, we know that
+		\begin{align*}
+			b^p \leq b^q,
+		\end{align*}
+		assuming that $p\leq q$ and $b\geq 1$. In our situation, our base is $b=\sqrt{2}$, which is bigger than 1. Our exponents are $p=1$ and $q=\sqrt{2}$ and it is true that $p\leq q$. So the answer is yes. We've established that $\sqrt{2} \leq \sqrt{2}^{\sqrt{2}}$. Next, we should check if $c_1 \leq c_2$. That means we need to check if 
+		\begin{align*}
+			\sqrt{2}^{\sqrt{2}} \leq \sqrt{2}^{\sqrt{2}^{\sqrt{2}}}.
+		\end{align*}
+		But that's true too! Because here, our base is $b=\sqrt{2}$ again. But our exponents now are $x=\sqrt{2}$ and $y=\sqrt{2}^{\sqrt{2}}$. But we just showed that $p\leq q$ a moment ago! We can repeat this process over and over again, which proves our sequence is increasing.\footnote{test}
+	\end{exercise}
+	
+	\begin{exercise}
+		Next, we need to show our sequence is bounded above. We claim that the terms in our sequence never get bigger than 2. Once again, we start with our first term. We're in luck, because $c_0=\sqrt{2} \leq 2$. If you don't believe me, try squaring both sides. Okay, moving on, is it true that
+		\begin{align*}
+			c_{1}=\sqrt{2}^{\sqrt{2}} \leq 2?
+		\end{align*}
+		Well raise both sides to the power of $\sqrt{2}$. The LHS becomes $\sqrt{2}^{\sqrt{2}*\sqrt{2}} = \sqrt{2}^2=2$. The RHS becomes $2^{\sqrt{2}}$. And it is true that $2\leq 2^{\sqrt{2}}$. Now try playing this same game again and again for all the other terms. You'll quickly see that $c_n \leq 2$ no matter what $n$ we choose.		
+	\end{exercise}
+	
+	What's our progress? So far, we've shown that $\{c_n\}$ is increasing and bounded above. That's enough to say there is a limit, but the problem is we don't know what it is. For now, let's give it a name: $L = \lim_{n \to \infty} c_{n}$. The last order of business is to prove that $L=2$.
+	
+	$\answer{2}$
+	
 	
 	
 	
