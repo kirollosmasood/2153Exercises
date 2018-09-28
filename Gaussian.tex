@@ -39,10 +39,10 @@ H'(t) =2F(t)F'(t)+H'(t) \\
 \begin{exercise}
 	After some simplification, we get
 	$$
-	H'(t) =2F(t)F'(t)+H'(t) \\
-	=2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx \\
+	H'(t)= 2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} t e^{-t^2 x^2)} dx \right] \\
+	=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
 	$$
-	
+	where the last manipulation has been made to trigger your desire to integrate by substitution.
 
 \end{exercise}
 
