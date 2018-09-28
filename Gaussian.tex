@@ -23,10 +23,18 @@ Let's first define a few functions that will help us out.
 \begin{align*}
 	&F(t)=\int_{0}^{t} e^{-x^2}dx \\
 	&G(t)=\int_{0}^{1} \frac{e^{-t^2(1+x^2)}}{1+x^2} dx \\
-	$H(t)=F(t)^2+G(t)
+	&H(t)=F(t)^2+G(t)
 \end{align*}
 The first function looks relevant, but it's not clear yet how the other ones will help us. Still, let's move on by exploring $H$.
+\begin{align*}
+H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx =  \left[ \answer[given]{0} \right]^2 + \left[ \answer[given]{\pi/4} \right] = \answer[given]{\pi/4}
+\end{align*}
 
+Next, let's find $H'(t)$. We can find the derivative of $F$ using the \wordChoice{\choice[correct]{First Fundamental Theorem of Calculus}\choice{Second Fundamental Theorem of Calculus}\choice{Third Fundamental Theorem of Calculus}\choice{Fundamental Theorem of Algebra}\choice{Fundamental Theorem of Riemannian Geometry}}. Now even though the limits of integration in $H$ don't depend on $t$, the integrand does. So to evaluate $H'(t)$, you may simply pull the derivative (with respect to $t$) inside and treat $x$ like a constant.
+$$
+H'(t) =2F(t)F'(t)+H'(t) \\
+=2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx \\
+$$
 
 
 
