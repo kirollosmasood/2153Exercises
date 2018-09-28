@@ -28,13 +28,12 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 	\end{align*}
 	The first function looks relevant, but it's not clear yet how the other ones will help us. Still, let's move on by exploring $H$.
 	\begin{align*}
-	H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx =  \left[ \answer[given]{0} \right]^2 + \answer[given]{\pi/4} = \answer[given]{\pi/4}
+	H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx = \left[ \answer[given]{0} \right]^2 + \answer[given]{\pi/4} = \answer[given]{\pi/4}
 	\end{align*}
 	
 	Next, let's find $H'(t)$. We can find the derivative of $F$ using the \wordChoice{\choice[correct]{First Fundamental Theorem of Calculus}\choice{Second Fundamental Theorem of Calculus}\choice{Third Fundamental Theorem of Calculus}\choice{Fundamental Theorem of Algebra}\choice{Fundamental Theorem of Riemannian Geometry}}. Now even though the limits of integration in $H$ don't depend on $t$, the integrand does. So to evaluate $H'(t)$, you may simply pull the derivative (with respect to $t$) inside and treat $x$ like a constant.
 	\begin{align*}
-	H'(t) =2F(t)F'(t)+H'(t) \\
-	=2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx \\
+		H'(t) =2F(t)F'(t)+H'(t) =2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx
 	\end{align*}
 	
 	\begin{exercise}
@@ -44,6 +43,16 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 			=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
 		\end{align*}
 		where the last manipulation has been made to trigger your desire to integrate by substitution. So we set $u(x)=\answer[given]{tx}$, so that $du=\answer[given]{tdx}$. We shouldn't forget about our limits of integration! When $x=0$, $u=\answer[given]{0}$. When $x=1$, $u=\answer[given]{t}$.
+		
+		\begin{exercise}
+			Putting it all together, we get
+			\begin{align*}
+				H'(t)=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{t} e^{-(u)^2}du \right]
+			\end{align*}
+			But $u$ is just a dummy variable. So doesn't that second integral look a lot like $F(t)$? In other words, $H'(t)=0$. That means that $H$ is constant; it's always $pi/4$. That's a shock!
+			
+			
+		\end{exercise}
 		
 	
 	\end{exercise}
