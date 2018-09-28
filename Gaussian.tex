@@ -33,7 +33,7 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 	
 	Next, let's find $H'(t)$. We can find the derivative of $F$ using the \wordChoice{\choice[correct]{First Fundamental Theorem of Calculus}\choice{Second Fundamental Theorem of Calculus}\choice{Third Fundamental Theorem of Calculus}\choice{Fundamental Theorem of Algebra}\choice{Fundamental Theorem of Riemannian Geometry}}. Now even though the limits of integration in $H$ don't depend on $t$, the integrand does. So to evaluate $H'(t)$, you may simply pull the derivative (with respect to $t$) inside and treat $x$ like a constant.
 	\begin{align*}
-		H'(t) =2F(t)F'(t)+H'(t) =2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[ e^{-t^2} \right]+\int_{0}^{1} \frac{ (-2t(1+x^2)) e^{-t^2(1+x^2)}}{1+x^2} dx
+		H'(t) =2F(t)F'(t)+H'(t) =2 \left[ \int_{0}^{t} e^{-x^2}dx \right] \left[\answer[given]{e^{-t^2}}\right]+\int_{0}^{1} \frac{ -2t(1+x^2) e^{-t^2(1+x^2)}}{(1+x^2)} dx
 	\end{align*}
 	
 	\begin{exercise}
@@ -42,7 +42,7 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 			H'(t) &= 2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} t e^{-t^2 x^2} dx \right] \\
 			&=2e^{-t^2} \left[ \int_{0}^{t} e^{-x^2}dx \right] -2e^{-t^2} \left[ \int_{0}^{1} e^{-(tx)^2} (tdx) \right],
 		\end{align*}
-		where the last manipulation has been made to trigger your desire to integrate by substitution. So we set $u(x)=\answer[given]{tx}$, so that $du=\answer[given]{tdx}$. We shouldn't forget about our limits of integration! When $x=0$, $u=\answer[given]{0}$. When $x=1$, $u=\answer[given]{t}$.
+		where the last change has been made to trigger your desire to integrate by substitution. So we set $u(x)=\answer[given]{tx}$, so that $du=\answer[given]{tdx}$. We shouldn't forget about our limits of integration! When $x=0$, $u=\answer[given]{0}$. When $x=1$, $u=\answer[given]{t}$.
 		
 		\begin{exercise}
 			Putting it all together, we get
@@ -65,7 +65,7 @@ Perhaps you have lain awake at night, thinking it is impossible to calculate $\i
 			\end{align*}
 			This means
 			\begin{align*}
-				\frac{\pi}{4} = \left[\lim_{t \to \infty} F(t) \right]^2 = \left[ \int_{0}^{\infty} e^{-x^2} dx \right]^2.
+				\frac{\pi}{4} = \left[\lim_{t \to \infty} F(t) \right]^2 = \left[\lim_{t \to \infty} \int_{0}^{t} e^{-x^2} dx \right]^2=\left[ \int_{0}^{\infty} e^{-x^2} dx \right]^2.
 			\end{align*}
 			We may solve to get
 			\begin{align*}
