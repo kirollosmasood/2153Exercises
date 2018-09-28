@@ -27,9 +27,13 @@ Let's first define a few functions that will help us out.
 \end{align*}
 The first function looks relevant, but it's not clear yet how the other ones will help us. Still, let's move on by exploring $H$.
 \begin{align*}
-H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx = \answer[given]{0}^2 + \answer[given]{\pi/4} = \answer[given]{\pi/2}
+	H(0)= F(0)^2+H(0)=\left[\int_{0}^{0} e^{-x^2}dx \right]^2+\int_{0}^{1} \frac{1}{1+x^2} dx = \answer[given]{0}^2 + \answer[given]{\pi/4} = \answer[given]{\pi/2}
 \end{align*}
 
+Next, let's find $H'(t)$. We can find the derivative of $F$ using the \wordChoice{\choice[correct]{First Fundamental Theorem of Calculus}\choice{Second Fundamental Theorem of Calculus}\choice{Third Fundamental Theorem of Calculus}\choice{Fundamental Theorem of Algebra}\choice{Fundamental Theorem of Riemannian Geometry}}. Now even though the limits of integration in $H$ don't depend on $t$, the integrand does. So to evaluate $H'(t)$, you may simply pull the derivative (with respect to $t$) inside and treat $x$ like a constant.
+\begin{align*}
+	H'(t)=2F(t)F'(t)+H'(t)=2
+\end{align*}
 
 
 
