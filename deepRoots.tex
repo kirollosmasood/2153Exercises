@@ -34,7 +34,7 @@ In this activity, we will transcend the limits of man.
 	\end{align*}
 	So what we actually want to show is that $\lim_{n \to \infty} c_n = \answer[given]{2}$. We can start by just showing there is a limit. We can do this by showing our sequence is (monotonically) increasing and bounded above.
 	
-	\begin{exercise}
+	\begin{remark}
 		How do we show that $\{c_n\}$ is increasing? We start from the beginning. Is it true that $c_0 \leq c_1$? Well, we know that
 		\begin{align*}
 			b^p \leq b^q,
@@ -44,15 +44,15 @@ In this activity, we will transcend the limits of man.
 			\sqrt{2}^{\sqrt{2}} \leq \sqrt{2}^{\sqrt{2}^{\sqrt{2}}}.
 		\end{align*}
 		That's true too! Our base is $b=\sqrt{2}$ again. But now, our exponents are $p=\sqrt{2}$ and $q=\sqrt{2}^{\sqrt{2}}$. Wait a minute; we just showed that $\sqrt{2} \leq \sqrt{2}^{\sqrt{2}}$ in the last step! We can repeat this process over and over again, which proves our sequence is increasing.
-	\end{exercise}
+	\end{remark}
 	
-	\begin{exercise}
+	\begin{remark}
 		Next, we need to show our sequence is bounded above. We claim that the terms in our sequence never get bigger than 2. Once again, we start with our first term. We're in luck, because $c_0=\sqrt{2} \leq 2$. If you don't believe me, try squaring both sides. Okay, moving on, is it true that
 		\begin{align*}
 		c_{1}=\sqrt{2}^{\sqrt{2}} \leq 2?
 		\end{align*}
 		Try raising both sides to the power of $\sqrt{2}$. The left-hand side (LHS) becomes $\sqrt{2}^{\sqrt{2}*\sqrt{2}} = \sqrt{2}^2=2$. The right-hand side (RHS) becomes $2^{\sqrt{2}}$. And it is true that $2\leq 2^{\sqrt{2}}$. Now try playing this same game again and again for all the other terms. You'll quickly see that $c_n \leq 2$ no matter what $n$ we choose.
-	\end{exercise}
+	\end{remark}
 		
 	Let's take a minute to step back and review what we've accomplished. So far, we've shown that $\{c_n\}$ is increasing and bounded above. That's enough to say the limit exists; let's call it $L$ for now. We still need to show that this limit has to be $2$.
 	
