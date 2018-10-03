@@ -24,7 +24,7 @@ Consider this series.
 Does it converge? If it does converge, what's the limit? The Divergence Test fails, so that doesn't help us. If you try the Ratio Test, the result is inconclusive. However, the Integral Test comes to the rescue. Work out these details on your own and you'll see that this series must converge. Now the only issue is finding what the limit is.
 
 \begin{exercise}	
-	We will begin our journey by casting some trigonometry magic. Doesn't $\sin(x)$ have zeros at $x=0,\pi,-\pi,2\pi,-2\pi,3\pi,-3\pi,$ and so on? So what if we tried to write this as a polynomial? How about
+	We will begin our journey by casting some trigonometry magic. Doesn't $\sin(x)$ have zeros at $x=0,\pi,-\pi,2\pi,-2\pi,3\pi,-3\pi,$ and so on? So what if we tried to write this as a polynomial? How about this?
 	\begin{align*}
 		f(x)= \left( x \right) \left( \frac{\pi-x}{\pi} \right) \left( \frac{\pi+x}{\pi} \right) \left(\frac{2\pi- x}{2\pi} \right) \left( \frac{2\pi+x}{2\pi} \right) \ldots
 	\end{align*}
@@ -32,7 +32,7 @@ Does it converge? If it does converge, what's the limit? The Divergence Test fai
 	\begin{image}
 		\includegraphics{sin.png}
 	\end{image}
-	So then you can also convince yourself that
+	That means we can also say the following.
 	\begin{align*}
 		\sin(\pi x) &= \left( \pi x \right) \left( 1-x \right) \left(1+x \right) \left(\frac{2-x}{2} \right) \left(\frac{2+x}{2} \right) \left( \frac{3-x}{3} \right) \left( \frac{3+x}{3} \right) \ldots \\
 		&= \left( \pi x \right) \left( 1-x^2 \right) \left(\frac{4-x^2}{4} \right) \left(\frac{9-x^2}{9} \right) \ldots
