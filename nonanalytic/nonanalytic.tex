@@ -72,11 +72,11 @@ Well what are the limitations? So far, the worst case scenario is that the power
 			
 			Non-analytic functions are those which cannot be recovered using a power series, for one reason or another. In this case, there was nothing wrong with the actual power series; our function just didn't match up with the end product. In some sense, $f$ just looked ``too flat'' at $x=0$. Our function simply wasn't nice enough, even though it was infinitely differentiable. Note that we call an infinitely differentiable function \dfn{smooth}.
 			
-			This is just one way a smooth function can fail to be analytic: its Taylor series expansion converges near the center but we just don't get our function back. Another way is that the resulting power series just doesn't converge no matter how close we are to the center (except of course exactly at $x=c$). We now move on to the next pathological suspect.
+			This is just one way a smooth function can fail to be analytic: its Taylor series expansion converges near the center but we just don't get our function back. Another way is that the resulting power series just doesn't converge no matter how close we are to the center (except of course exactly at $x=c$). We now move on to the next suspect.
 			\begin{align}
 				g(x)=\sum_{k=0}^\infty e^{-k}\cos(k^2 x)
 			\end{align}
-			This function is defined for any value of $x$. To see this, simply test for absolute convergence. And while testing for absolute convergence, use a comparison to a geometric series. Oh and look! This function is already written as a series, so aren't we done? Well the issue is it isn't a \emph{power} series. The terms in the sums aren't powers of $x$. They are powers of $\cos(x)$. It is a very long and tedious process to show that the radius of convergence of the Taylor series centered at $x=0$ is $0$. Try it out yourself if you'd like, and feel free to come see me if you're stuck.
+			This function is defined for any value of $x$. To see this, simply test for absolute convergence. And while testing for absolute convergence, use a comparison to a geometric series. Oh and look! This function is already written as a series, so aren't we done? Have we falsely accused $g$?!?! Well the issue is it isn't a \emph{power} series. The terms in the sums aren't powers of $x$. They are powers of $\cos(x)$. It is a very long and tedious process to show that the radius of convergence of the Taylor series centered at $x=0$ is $0$. Try it out yourself if you'd like, and feel free to come see me if you're stuck.
 			
 			So what do you think of non-analytic smooth functions?
 			\begin{multipleChoice}
