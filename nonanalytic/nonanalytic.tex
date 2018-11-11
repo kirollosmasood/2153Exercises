@@ -61,32 +61,32 @@ Well what are the limitations? So far, the worst case scenario is that the power
 				0 &x=0
 				\end{cases}
 			\end{align*}
+		
+			We see that this function is also continuous. But is it differentiable? Do you see where this is going? You can repeat this process as many times as you want. You can use the chain rule when $x$ is not $0$. And when $x=0$, you get $0$, no matter how many powers of $x$ end up appearing on the bottom. If you don't believe me, just try finding $f''(0)$. You'll soon learn that trust is a precious thing. Alright, so let's write down the Taylor series for $f(x)$ centered at $x=0$.
+			\begin{align*}
+				T(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(0)}{k!} x^k = 0
+			\end{align*}
+			Oh boy! We don't have to worry about the radius of convergence! This series converges for any value of $x\ldots$ to $0$. But where's our function!?
+			
+			We see that even though the Taylor series has all the right information about $f$ at $x=0$, it fails to be accurate anywhere else; we don't get back our function. No matter how close $x$ is to 0. Even though the radius of convergence is $\infty$. This is an example of a \dfn{non-analytic} function. 
+			
+			Non-analytic functions are those which cannot be recovered using a power series, for one reason or another. In this case, there was nothing wrong with the actual power series; our function just didn't match up with the end product. In some sense, $f$ just looked ``too flat'' at $x=0$. Our function simply wasn't nice enough, even though it was infinitely differentiable. Note that we call an infinitely differentiable function \dfn{smooth}.
+			
+			This is just one way a smooth function can fail to be analytic: its Taylor series expansion converges near the center but we just don't get our function back. Another way is that the resulting power series just doesn't converge no matter how close we are to the center (except of course exactly at $x=c$). We now move on to the next pathological suspect.
+			\begin{align}
+				g(x)=\sum_{k=0}^\infty e^{-k}\cos(k^2 x)
+			\end{align}
+			This function is defined for any value of $x$. To see this, you can simply test for absolute convergence. And while testing for absolute convergence, you can use just compare it to a geometric series. Oh and look! This function is already written as a series, so aren't we done? Well the issue is it isn't a \emph{power} series. The terms in the sums aren't powers of $x$. They are powers of $\cos(x)$. It is a very long and tedious process to show that the radius of convergence of the Taylor series centered at $x=0$ is $0$. Try it out yourself if you'd like, and feel free to come see me if you're stuck.
+			
+			So what do you think of non-analytic smooth functions?
+			\begin{multipleChoice}
+				\choice[correct]{I think they're cool!}
+				\choice[correct]{I think they're atrocious.}
+				\choice[correct]{I'm not sure I understand them.}
+				\choice[correct]{I'm going to pretend they don't exist and hope I never run into one again.}
+			\end{multipleChoice}
+		
 		\end{exercise}
-		We see that this function is also continuous. But is it differentiable? Do you see where this is going? You can repeat this process as many times as you want. You can use the chain rule when $x$ is not $0$. And when $x=0$, you get $0$, no matter how many powers of $x$ end up appearing on the bottom. If you don't believe me, just try finding $f''(0)$. You'll soon learn that trust is a precious thing. Alright, so let's write down the Taylor series for $f(x)$ centered at $x=0$.
-		\begin{align*}
-			T(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(0)}{k!} x^k = 0
-		\end{align*}
-		Oh boy! We don't have to worry about the radius of convergence! This series converges for any value of $x\ldots$ to $0$. But where's our function!?
-		
-		We see that even though the Taylor series has all the right information about $f$ at $x=0$, it fails to be accurate anywhere else; we don't get back our function. No matter how close $x$ is to 0. Even though the radius of convergence is $\infty$. This is an example of a \dfn{non-analytic} function. 
-		
-		Non-analytic functions are those which cannot be recovered using a power series, for one reason or another. In this case, there was nothing wrong with the actual power series; our function just didn't match up with the end product. In some sense, $f$ just looked ``too flat'' at $x=0$. Our function simply wasn't nice enough, even though it was infinitely differentiable. Note that we call an infinitely differentiable function \dfn{smooth}.
-		
-		This is just one way a smooth function can fail to be analytic: its Taylor series expansion converges near the center but we just don't get our function back. Another way is that the resulting power series just doesn't converge no matter how close we are to the center (except of course exactly at $x=c$). We now move on to the next pathological suspect.
-		\begin{align}
-			g(x)=\sum_{k=0}^\infty e^{-k}\cos(k^2 x)
-		\end{align}
-		This function is defined for any value of $x$. To see this, you can simply test for absolute convergence. And while testing for absolute convergence, you can use just compare it to a geometric series. Oh and look! This function is already written as a series, so aren't we done? Well the issue is it isn't a \emph{power} series. The terms in the sums aren't powers of $x$. They are powers of $\cos(x)$. It is a very long and tedious process to show that the radius of convergence of the Taylor series centered at $x=0$ is $0$. Try it out yourself if you'd like, and feel free to come see me if you're stuck.
-		
-		So what do you think of non-analytic smooth functions?
-		\begin{multipleChoice}
-			\choice[correct]{I think they're cool!}
-			\choice[correct]{I think they're atrocious.}
-			\choice[correct]{I'm not sure I understand them.}
-			\choice[correct]{I'm going to pretend they don't exist and hope I never run into one again.}
-		\end{multipleChoice}
-		
-		
 		
 	\end{exercise}
 	
